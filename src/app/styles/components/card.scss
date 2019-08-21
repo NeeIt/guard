@@ -1,0 +1,44 @@
+@import "../elements/colors.scss";
+@import "../elements/flex.scss";
+
+.card {
+  @include flex($dir: column);
+
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  color: $cDark;
+  background-color: $cWhite;
+  max-width: 500px;
+  margin: auto;
+  border-radius: 5px;
+  overflow: hidden;
+
+  & > div {
+    padding: 20px;
+  }
+  .card-header {
+    @include flex($j: center, $ai: center);
+    background-color: $cMainDark;
+    color: $cMainWhite;
+    font-size: 1.3em;
+  }
+  .card-body {
+    color: $cDark;
+
+    h2 {
+      font-family: "Open Sans", sans-serif;
+      font-size: 24px;
+      font-weight: 300;
+      line-height: 32px;
+      margin: 0 0 14px;
+    }
+
+    p {
+      font-family: "Open Sans", sans-serif;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 24px;
+      margin: 0 0 14px;
+    }
+  }
+}

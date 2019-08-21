@@ -1,0 +1,57 @@
+<div class="wrap">
+    <div class="mask"> </div>
+    <form class="form card" [formGroup]="RegForm" (ngSubmit)="onSubmit()">
+        <div class="card-header">
+            Welcome
+        </div>
+        <div class="card-body">
+                <div class="group">      
+
+                        <input type="text" formControlName="username">
+
+                        <span class="highlight"></span>
+                        <span class="bar"></span>
+                        <label>User name</label>
+
+                        <div class="alert" *ngIf="submitted && controls.username.errors">Username is required</div>
+
+                </div>
+                <div class="group">      
+
+                    <input type="text" formControlName="firstname">
+
+                    <span class="highlight"></span>
+                    <span class="bar"></span>
+                    <label>First name</label>
+
+                    <div class="alert" *ngIf="submitted && controls.firstname.errors">First is required</div>
+
+                </div>
+                <div class="group">       
+                    <input type="text" formControlName="lastname">
+                    <span class="highlight"></span>
+                    <span class="bar"></span>
+                    <label>Last name</label>
+                    <div class="alert" *ngIf="submitted && controls.lastname.errors">Last is required</div>
+            </div>
+                <div class="group">      
+                    <input type="password" formControlName="password">
+                    <span class="highlight"></span>
+                    <span class="bar"></span>
+                    <label>Password</label>
+                    <div class="alert" *ngIf="submitted && controls.password.errors">Password is required</div>
+                   
+                </div>
+                <div class="group">       
+                    <input type="password" formControlName="confirmPassword">
+                    <span class="highlight"></span>
+                    <span class="bar"></span>
+                    <label>Confirm password</label>
+                    <div class="alert" *ngIf="RegForm.hasError('notSame')">Passwords are not same</div>
+                    
+                </div>
+            <input type="submit" class="but" value="Reg" />
+            <a routerLink="/login" class="back">Back</a>
+        </div>
+    </form>
+</div>

@@ -1,0 +1,11 @@
+@import './styles/elements/flex.scss';
+
+.container{
+    padding:10px;
+}
+.stat{
+    z-index: 99;
+    background-color: white;
+    position: absolute;
+    bottom:0;
+}

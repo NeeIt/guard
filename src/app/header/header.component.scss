@@ -1,0 +1,29 @@
+@import '../styles/elements/flex.scss';
+@import '../styles/elements/link.scss';
+@import '../styles/elements/colors.scss';
+@import '../styles/elements/params.scss';
+
+:host{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.nav{
+    @include flex();
+background-color: $cDark;
+height:$headerHeight;
+    a{
+        @include flex($ai:center,$j:center);
+        @include linkColor($cGray);
+        height:100%;
+        padding:0px 10px;
+
+        &:first-of-type{
+            padding-left:20px;
+        }
+        &.active-link{
+            @include linkColor($cDark);
+            background-color: $cGray;
+            
+        }
+    }
+}

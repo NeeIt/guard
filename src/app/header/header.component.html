@@ -1,0 +1,5 @@
+<nav class="nav">
+    <a routerLink="/" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact: true}">Home</a>
+    <a routerLink="/admin" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact: true}" *ngIf="isAdmin">Admin</a>
+    <a (click)="logout()">Log Out</a>
+  </nav>

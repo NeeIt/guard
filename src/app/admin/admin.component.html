@@ -1,0 +1,11 @@
+<div class="card">
+        <div class="card-header">Admin</div>
+        <div class="card-body">
+            <h2>Aenean non ante</h2>
+            <li *ngFor="let user of users">
+                    ({{user.firstname}} {{user.lastname}})
+                    <a (click)="deleteUser(user.id)" class="text-danger" *ngIf="user.id!==currentUser.id"> Delete</a>
+            </li>
+        </div>
+    </div>
+    
